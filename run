@@ -58,7 +58,7 @@ execute_and_echo() {
 # see the error messages that espeak produces - there is a known
 # bug with espeak regarding this
 if [[ $EUID -ne 0 ]]; then
-    execute_and_echo sudo python ./tts.py "$@" 2>/dev/null 
+    execute_and_echo sudo python3 ./tts.py "$@" 2>/dev/null
 else
-    execute_and_echo python ./tts.py "$@" 2>/dev/null 
+    execute_and_echo python3 ./tts.py "$@" 2>/dev/null 
 fi
